@@ -12,7 +12,9 @@
     "test:watch": "npm test -- --watch",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover --report text --report html node_modules/mocha/bin/_mocha -- --reporter dot -r ignore-styles -r ./test/setup.js --recursive",
     "postinstall": "webpack -p --config ./webpack.prod.config.js --optimize-dupe",
-    "wp": "webpack --hot --config webpack.dev.config.js"
+    "wp": "webpack --hot --config webpack.dev.config.js",
+    "travis:coverage": "babel-node node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report lcovonly -- -r ignore-styles -r ./test/setup.js --recursive",
+    "travis:coveralls": "npm run travis:coverage && coveralls < coverage/lcov.info && rimraf coverage"
   },
   "repository": {
     "type": "git",
