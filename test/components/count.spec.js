@@ -30,12 +30,8 @@ describe('Count Component', () => {
   it('should output { maxCount } (4) icons', () => {
     const countComponent = renderCount()
 
-    const icons = TestUtils.scryRenderedDOMComponentsWithTag(countComponent, 'span') //change to SVG LATER
+    const icons = TestUtils.scryRenderedDOMComponentsWithTag(countComponent, 'svg')
 
     expect(icons.length).toEqual(4)
-  })
-
-  it('should mark #{ count } of icons with class is-active', () => {
-    //When SVG has been made, use includeJSX(<SVG />x{count}/>)
   })
 })

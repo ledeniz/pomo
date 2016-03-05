@@ -41,11 +41,11 @@ describe('Index Container', () => {
     expect(renderShallowIndex()).toIncludeJSX('Count')
   })
 
-  it('should have 3 <Button />\'s', () => {
+  it('should have 2 <Button />\'s', () => {
     const index = renderIndex()
     const buttons = TestUtils.scryRenderedDOMComponentsWithTag(index, 'button')
 
-    expect(buttons.length).toEqual(3)
+    expect(buttons.length).toEqual(2)
   })
 
   it('should show button label as \'Break\' when isBreak = true', () => {
