@@ -13,7 +13,7 @@ deploy:
     region: us-east-1
     skip_cleanup: true
     local_dir: dist
-    acl: public
+    acl: public-read
     detect_encoding: true
 notifications:
     email:
