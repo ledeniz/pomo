@@ -10,7 +10,7 @@ import {
 
 import { initialData, initialProdData } from './../config'
 
-const isProd = process.env.node_ENV === 'production'
+const isProd = process.env.NODE_ENV === 'production'
 const initialState = (isProd) ? initialProdData : initialData
 
 export default function (state = initialState, action) {
