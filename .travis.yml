@@ -1,10 +1,21 @@
 language: node_js
 node_js:
-  - "5"
-script:
-  - npm run test
-branches:
-  only:
-    - master
+    - "6"
+script: "npm run test"
 after_script:
   npm run travis:coveralls
+deploy:
+    provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: pomodo
+    endpoint: http://pomodo.work.s3-website-us-east-1.amazonaws.com/
+    region: us-east-1
+    skip_cleanup: true
+    local-dir: dist
+    acl: public
+    detect_encoding: true
+notifications:
+    email:
+        on_failure: always
+

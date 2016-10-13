@@ -1,5 +1,6 @@
 import {
   TIMER_START,
+  TIMER_PAUSE,
   TIMER_RESET,
   TIMER_TICK,
   TIMER_END
@@ -7,40 +8,54 @@ import {
 
 import { calcTimeDifference, getUnixTimestamp } from '../utils/time'
 
+import { notification } from './../utils/notification'
 
-export function startTimer () {
+export const startTimer = () => {
   const startTime = getUnixTimestamp()
 
   return (dispatch, getState) => {
+    if (getState().intervalId) {
+      return dispatch(pauseTimer(getState().intervalId))
+    }
+
     const intervalId = setInterval(() => {
-      if (getState().time === 0 || getState().time <= 0) {
+      if (getState().time <= 0) {
         return dispatch(endTimer(getState()))
       }
 
       return dispatch({ type: TIMER_TICK, time: calcTimeDifference(startTime, getUnixTimestamp()) })
     }, 1000)
 
-    dispatch({ type: TIMER_START, intervalId, startTime })
+    return dispatch({ type: TIMER_START, intervalId, startTime })
   }
 }
 
-export function resetTimer () {
+export const pauseTimer = (intervalId) => {
+  clearInterval(intervalId)
+  return { type: TIMER_PAUSE }
+}
+
+export const resetTimer = () => {
   return (dispatch, getState) => {
     clearInterval(getState().intervalId)
-
     return dispatch({ type: TIMER_RESET, intervalId: null })
   }
 }
 
-export function endTimer () {
+export const endTimer = () => {
   return (dispatch, getState) => {
-    let { isFinale, intervalId, count } = getState()
+    let { isFinale, intervalId, count, isBreak } = getState()
 
     clearInterval(intervalId)
 
     if (count === 4) {
       isFinale = true
     }
+
+    const cycle = (isBreak) ? 'Break' : 'Work'
+    const action = (isBreak) ? 'work' : 'relax'
+
+    notification(`${ cycle } has ended, time to ${ action }!`)
 
     return dispatch({
       type: TIMER_END,

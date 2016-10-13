@@ -1,12 +1,20 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
+import localStore from 'store'
 
-import App from './containers/App'
-import configureStore from './store/configure-store'
-import { initialState } from './config'
+import store from './store/index'
+import { pauseTimer } from './actions/index'
 
-const store = configureStore(initialState)
+import App from './containers/App.jsx'
+
+store.subscribe(() => {
+  localStore.set('state', store.getState())
+})
+
+window.onbeforeunload = () => {
+  store.dispatch(pauseTimer(store.getState().intervalId))
+}
 
 render (
   <Provider store={ store }>

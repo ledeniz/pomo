@@ -53,7 +53,8 @@ html {
   text-align: center;
   display: flex;
   justify-content: center;
-  background: linear-gradient(to top, #e53935 , #e35d5b);
+  align-items: center;
+  background: linear-gradient(to top, #f44336, #f77066);
   -webkit-user-select: none;
   cursor: default;
 }
@@ -68,7 +69,7 @@ html {
       content: '';
       opacity: 0;
       z-index: -1;
-      background: linear-gradient(to top, #09B542 , #44F77C);
+      background: linear-gradient(to top, #4caf50, #6ec071);
       transition: opacity 4s;
     }
     .container.is-break:before {
@@ -76,20 +77,16 @@ html {
       transition: opacity 4s;
     }
 
-.box {
-  margin-top: 18%;
-}
-
 .button {
-  min-width: 116px;
+  min-width: 188px;
   display: inline-block;
-  padding: 12px 38px;
+  padding: 14px 62px;
   margin-top: 24px;
   margin-right: 28px;
   cursor: pointer;
   border: 1px solid rgba(255,255,255, 0.3);
   color: #F8F8F8;
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 300;
   border-radius: 6px;
   box-shadow: 0 2px 1px 0 rgba(0,0,0,.2);
@@ -118,22 +115,97 @@ html {
   }
 
 .timer {
-  font-size: 74px;
+  font-size: 140px;
 }
 
 .count {
-  margin-top: 27px;
   display: flex;
-  justify-content: space-around;
+  width: 96%;
+  justify-content: space-between;
+  margin: 27px auto 0;
 }
   .count .is-active {
     opacity: 0.9;
   }
   .count svg {
-    width: 35px;
-    height: 40px;
+    width: 65px;
+    height: 70px;
     opacity: 0.2;
   }
   .count svg tspan {
     fill: #F8F8F8;
   }
+
+.keybindings {
+  position: absolute;
+  top: -80px;
+  left: -112px;
+  background: rgba(255,255,255,0.15);
+  padding: 12px;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 14px;
+}
+
+  kbd {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    color: #333;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 0 0.1em;
+    padding: 0.1em 0.6em;
+    text-shadow: 0 1px 0 #fff;
+    white-space: nowrap;
+  }
+
+.notifications {
+  display: inline-block;
+}
+
+  @media only screen and (max-width: 746px) {
+    .notifications {
+      display: none;
+    }
+  }
+
+.link, a {
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px solid #FFFFFF;
+  cursor: pointer;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+  .link:hover .keybindings {
+    display: block;
+  }
+
+  .link .keybindings {
+    display: none;
+  }
+  .link .link-title {
+    display: inline-block;
+  }
+
+.links {
+  position: absolute;
+  bottom: 28px;
+  right: 128px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.spacer {
+  margin: 0 6px;
+}
+
+@media only screen and (max-width: 746px) {
+  .hide-mobile {
+    display: none;
+  }
+}

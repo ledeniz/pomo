@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import classNames from 'classnames'
 
-import Index from './Index'
+import Index from './Index.jsx'
+
 require('../../css/main.css')
 
 export class App extends Component {
@@ -20,9 +21,6 @@ export class App extends Component {
   }
 }
 
-/* istanbul ignore next */
-function mapStateToProps (state) {
-  return state
-}
+const mapStateToProps = (state) => (state)
 
 export default connect(mapStateToProps)(App)
