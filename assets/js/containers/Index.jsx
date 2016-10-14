@@ -36,8 +36,8 @@ export default class Index extends Component {
           <Count count={ count } maxCount={ maxCount }/>
         </div>
 
-        <div className="links">
-          <div className="link hide-mobile">
+        <div className="links hide-mobile">
+          <div className="link">
             <Keybindings />
           </div>
           <span className="spacer">|</span>
