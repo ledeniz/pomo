@@ -47,6 +47,7 @@ html {
   width: 100vw;
   position: relative;
   z-index: 1;
+  overflow: hidden;
   font-family: Sans-Serif;
   font-weight: 300;
   color: #F8F8F8;
