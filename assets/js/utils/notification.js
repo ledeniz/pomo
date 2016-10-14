@@ -1,10 +1,10 @@
 export const notification = (body) => {
-  if (!'Notification' in window) {
+  if (!Notification) {
     console.warn('Browser does not support notifications')
     return false
   }
 
-  if (window.Notification.permission !== 'granted') {
+  if (Notification.permission !== 'granted') {
     console.log('Tried to send notification when they are not enabled')
     return false
   }
@@ -15,7 +15,7 @@ export const notification = (body) => {
     body
   }
 
-  const n = new window.Notification('Pomodo', options)
+  const n = new Notification('Pomodo', options)
 
   setTimeout(n.close.bind(n), 5000);
 }
