@@ -9,8 +9,6 @@ export const notificationsSet = (toggle) => ({
 
 export const notificationsRequest = () => {
   return (dispatch) => {
-    if (!Notification) return false
-
     try {
       Notification.requestPermission(
         permission => handleNotificationsRequest(permission)
