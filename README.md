@@ -1,7 +1,4 @@
-[![Build Status](https://travis-ci.org/ledeniz/pomo.ozealis.de.svg?branch=master)](https://travis-ci.org/ledeniz/pomo.ozealis.de)
-[![Coverage Status](https://coveralls.io/repos/github/ledeniz/pomo.ozealis.de/badge.svg?branch=master&v=500)](https://coveralls.io/github/ledeniz/pomo.ozealis.de?branch=master)
-
-# [Pomodo](https://pomo.ozealis.de)
+# [pomo](https://pomo.ozealis.de)
 
 A pomodoro technique web-app. Forked from https://github.com/tomspeak/pomodo.work
 
