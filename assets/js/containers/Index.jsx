@@ -26,11 +26,11 @@ export default class Index extends Component {
         <div className="box">
           <Timer time={ time } />
           <Button
-            title={ ((isActive) ? "Pause" : isBreak ? "Break" : "Work") }
+            title={ ((isActive) ? "pause" : isBreak ? "break" : "work") }
             onClick={ this.onStart }
           />
           <Button
-            title={ 'Reset' }
+            title={ 'reset' }
             onClick={ this.onReset }
           />
           <Count count={ count } maxCount={ maxCount }/>
@@ -47,7 +47,7 @@ export default class Index extends Component {
             onClick={ this.handleNotificationsClick }
           />
 
-          <a className="link" href="https://github.com/ledeniz/pomo">Code</a>
+          <a className="link" href="https://github.com/ledeniz/pomo">code</a>
         </div>
       </div>
     )
