@@ -8,6 +8,8 @@ A pomodoro technique web-app. Available at https://pomo.ozealis.de. Forked from 
 
 - New (and imho more pleasant) background colors
 
+- Removed Google Analytics Script
+
 #### Original
 - HTML5 Notifications
 
