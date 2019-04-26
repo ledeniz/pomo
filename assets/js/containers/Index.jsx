@@ -47,7 +47,7 @@ export default class Index extends Component {
             onClick={ this.handleNotificationsClick }
           />
 
-          <a className="link" href="https://github.com/ledeniz/pomo">code</a>
+          <a className="link" target="_blank" href="https://github.com/ledeniz/pomo">code</a>
         </div>
       </div>
     )
