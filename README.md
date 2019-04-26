@@ -1,6 +1,8 @@
+<sub>Forked from https://github.com/tomspeak/pomodo.work</sub>
 # [pomo](https://pomo.ozealis.de)
 
-A pomodoro technique web-app. Available at https://pomo.ozealis.de. Forked from https://github.com/tomspeak/pomodo.work
+A pomodoro technique web-app.
+Available at https://pomo.ozealis.de.
 
 ### Features
 #### New
