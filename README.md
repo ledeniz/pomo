@@ -4,9 +4,9 @@ A pomodoro technique web-app. Available at https://pomo.ozealis.de. Forked from 
 
 ### Features
 #### New
-- New (and imho more pleasent) audio notification
+- New (and imho more pleasant) audio notification
 
-- New (and imho more pleasent) background colors
+- New (and imho more pleasant) background colors
 
 #### Original
 - HTML5 Notifications
