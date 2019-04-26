@@ -7,7 +7,7 @@ const Notifications = ({ notifications, onClick }) => {
         <div>
           <span
             onClick={ onClick }
-            className="link">Enable notifications</span>
+            className="link">enable notifications</span>
           <span className="spacer">|</span>
         </div>
       }
