@@ -1,4 +1,4 @@
-<sub>Forked from https://github.com/tomspeak/pomodo.work</sub>
+<sub>Forked from https://github.com/tomspeak/pomodo.work - thank you Tom Speak!</sub>
 # [pomo](https://pomo.ozealis.de)
 
 A pomodoro technique web-app.
@@ -6,9 +6,9 @@ Available at https://pomo.ozealis.de.
 
 ### Features
 #### New
-- New (and imho more pleasant) audio notification
+- New sounds for work & relax
 
-- New (and imho more pleasant) background colors
+- Minor cosmetic changes, which are easier to my eyes
 
 - Removed Google Analytics Script
 
