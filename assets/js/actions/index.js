@@ -60,7 +60,7 @@ export const endTimer = () => {
     return dispatch({
       type: TIMER_END,
       isFinale,
-      meta: { sound: 'notification' }
+      meta: { sound: action }
     })
   }
 }

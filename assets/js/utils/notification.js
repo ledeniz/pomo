@@ -16,7 +16,7 @@ export const notification = (body) => {
       body
     }
 
-    const n = new Notification('Pomodo', options)
+    const n = new Notification('pomo', options)
 
     setTimeout(n.close.bind(n), 5000);
   } catch (e) {

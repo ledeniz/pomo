@@ -1,15 +1,15 @@
 export const initialData = {
-  breakTime: 5,
+  breakTime: 1,
   count: 0,
   intervalId: null,
   isActive: false,
   isBreak: false,
   isFinale: false,
-  longBreakTime: 55,
+  longBreakTime: 2,
   maxCount: 4,
   startTime: 0,
-  time: 8,
-  workTime: 8,
+  time: 1,
+  workTime: 1,
   notifications: false
 }
 
@@ -21,5 +21,6 @@ export const initialProdData = Object.assign({}, initialData, {
 })
 
 export const soundsData = {
-  notification: './audio/notification.mp3'
+  work: './audio/work.mp3',
+  relax: './audio/relax.mp3'
 }

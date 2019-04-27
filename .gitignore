@@ -5,3 +5,4 @@ dist/
 /coverage
 test/coverage
 .nyc_output/
+.idea
