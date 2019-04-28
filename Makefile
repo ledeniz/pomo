@@ -14,6 +14,8 @@ dev: clean
 prod: clean
 	npx webpack --env.prod
 	$(INSTALL)
+	git add .
+	git commit -m 'automatic make commit'
 
 clean:
 	rm -Rf ${DIST}
