@@ -54,7 +54,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, #262528, #201f20);
+  background: linear-gradient(to top, #19243a, #1a2338);
   -webkit-user-select: none;
   cursor: default;
 }
@@ -70,7 +70,7 @@ html {
       opacity: 0;
       z-index: -1;
       color: #F8F8F8;
-      background: linear-gradient(to top, #16154f, #11114f);
+      background: linear-gradient(to top, #175255, #295c4e);
       transition: opacity 4s;
     }
     .container.is-break:before {
