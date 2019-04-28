@@ -9,10 +9,12 @@ all: dev
 
 dev: clean
 	npx webpack --env.dev
+	echo "dev" > build
 	$(INSTALL)
 
 prod: clean
 	npx webpack --env.prod
+	echo "prod" > build
 	$(INSTALL)
 
 clean:
